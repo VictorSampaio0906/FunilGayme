@@ -1,3 +1,8 @@
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
 import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -78,10 +83,12 @@ export default function CheckoutForm({
   const cor = cores[tema];
 
   useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    setTimeout(() => {
-      document.body.style.overflow = "auto";
-    }, 1000);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
   }, []);
 
   const gerarPix = async () => {
@@ -131,6 +138,18 @@ export default function CheckoutForm({
 
       if (result.success && result.data) {
         setPixData(result.data);
+
+        // Enviar evento para o Facebook Pixel (apenas 'pix_gerado', sem marcar como compra)
+        if (typeof window !== "undefined" && typeof window.fbq === "function") {
+          window.fbq("trackCustom", "pix_gerado", {
+            name,
+            email,
+            fluxo,
+            value: preco,
+            currency: "BRL",
+          });
+        }
+
         toast({
           title: "Pagamento gerado! 🎉",
           description: "Escaneie o QR Code ou copie a chave Pix.",
@@ -238,7 +257,7 @@ export default function CheckoutForm({
                 {temDesconto && (
                   <>
                     <span className="text-lg text-gray-400 line-through">
-                      R$ {precoOriginal!.toFixed(2)}
+                      R$ {precoOriginal && `R$ ${precoOriginal.toFixed(2)}`}
                     </span>
                     <br />
                   </>
