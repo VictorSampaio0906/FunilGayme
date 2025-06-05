@@ -123,8 +123,7 @@ export default function GameOverPopup({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1 }}
           >
-            <DelayedCheckoutButton handleCheckout={handleCheckout} /> //Botao
-            com delay
+            <DelayedCheckoutButton handleCheckout={handleCheckout} />
           </motion.div>
 
           <motion.p

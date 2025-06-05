@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { useSoundManager } from "./sound-manager";
 
-const GAME_DURATION = 10; // seconds
+const GAME_DURATION = 30; // seconds
 
 export default function CandyCrushGame() {
   const [score, setScore] = useState(0);
