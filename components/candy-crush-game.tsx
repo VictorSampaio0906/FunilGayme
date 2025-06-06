@@ -360,7 +360,7 @@ export default function CandyCrushGame() {
                 <div className="w-5 h-5 sm:w-6 sm:h-6 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-xs sm:text-sm">
                   3
                 </div>
-                <p className="text-xs sm:text-sm">Acumule bônus em reais!</p>
+                <p className="text-xs sm:text-sm">Acumule bônus!</p>
               </div>
             </div>
           </motion.div>

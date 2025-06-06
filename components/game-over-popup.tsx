@@ -90,7 +90,7 @@ export default function GameOverPopup({
               animate={{ scale: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
             >
-              Você teria feito isso HOJE!
+              Assista o video para começar a lucrar!
             </motion.h2>
             <motion.p
               className="text-lg sm:text-xl font-bold text-gray-700"
@@ -98,11 +98,8 @@ export default function GameOverPopup({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
             >
-              Imagina fazer{" "}
-              <span className="text-green-500 font-extrabold">
-                R${formattedBonus.toFixed(2)}
-              </span>{" "}
-              por dia com um método tão simples quanto arrastar doce!
+              Assista o video para entender como voce pode fazer dinheiro apenas
+              com seu celular com um método tão simples quanto arrastar doce!
             </motion.p>
           </div>
 
@@ -113,8 +110,11 @@ export default function GameOverPopup({
             transition={{ delay: 0.9 }}
           >
             <p className="text-lg sm:text-xl font-bold  text-gray-800">
-              Enquanto você reclama, outros estão lucrando. Dinheiro não aparece
-              pra quem só reclama. Chega de desculpas!
+              Enquanto você reclama, outros estão lucrando{" "}
+              <span className="text-green-500 font-extrabold">
+                R${formattedBonus.toFixed(2)}
+              </span>{" "}
+              por dia! Chega de desculpas! Assista o video para liberar o acesso
             </p>
           </motion.div>
 
@@ -140,15 +140,7 @@ export default function GameOverPopup({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
-          >
-            <Button
-              variant="outline"
-              onClick={handleRestart}
-              className="text-red-600 border-red-300 bg-yellow-50 hover:bg-purple-50 text-sm sm:text-base"
-            >
-              Jogar novamente
-            </Button>
-          </motion.div>
+          ></motion.div>
         </div>
       </motion.div>
     </motion.div>
