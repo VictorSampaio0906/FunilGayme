@@ -197,6 +197,57 @@ export default function GameOverPopup({
           >
             <DelayedCheckoutButton handleCheckout={handleCheckout} />
           </motion.div>
+          <div className="bg-white rounded-2xl p-4 shadow-md border border-gray-200 max-w-md mx-auto text-left mt-6 space-y-4">
+            <h3 className="text-2xl font-semibold text-center text-gray-800">
+              O que você vai receber imediatamente:
+            </h3>
+
+            <ul className="space-y-3 text-base text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="text-green-600 text-xl">📕</span>
+                <span>
+                  <strong>Apostila Digital:</strong> Descubra o passo a passo
+                  para lucrar com doces direto do seu celular, sem sair de casa.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-600 text-xl">📈</span>
+                <span>
+                  <strong>Aulas Exclusivas:</strong> Comece ainda hoje, mesmo
+                  sem experiência em vendas — e o melhor: sem precisar sair de
+                  casa! Método simples, direto e completo.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-yellow-500 text-xl">📋</span>
+                <span>
+                  <strong>Plano de Ação Rápida:</strong> Comece hoje e veja seus
+                  primeiros lucros em menos de 24 horas — tudo pronto, testado e
+                  feito pra quem quer resultado rápido.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-pink-500 text-xl">💬</span>
+                <span>
+                  <strong>Suporte Premium:</strong> Tire suas dúvidas
+                  diretamente com nossa equipe. Acompanhamento garantido.
+                </span>
+              </li>
+            </ul>
+
+            <div className="text-center pt-2">
+              <div className="inline-block px-4 py-2 text-sm bg-green-100 text-green-700 rounded-full font-semibold">
+                <span className="line-through text-red-500 mr-2">R$97,90</span>
+                <span className="text-green-700 font-bold">
+                  AGORA por R$19,90
+                </span>
+              </div>
+              <p className="mt-1 text-xs text-gray-500 italic">
+                *Oferta especial disponível por tempo limitado.
+              </p>
+            </div>
+          </div>
+
           <motion.p
             className="text-center text-xs sm:text-sm mt-3 sm:mt-4 text-gray-600 font-medium"
             initial={{ opacity: 0 }}
