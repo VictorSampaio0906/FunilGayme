@@ -12,7 +12,7 @@ export default function DelayedCheckoutButton({
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowButton(true);
-    }, 40000); // 40 segundos
+    }, 10000); // 40 segundos
 
     return () => clearTimeout(timer);
   }, []);

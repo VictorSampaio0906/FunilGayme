@@ -88,13 +88,13 @@ export default function GameOverPopup({
         <div className="p-4 sm:p-8">
           <div className="mb-4 sm:mb-6 text-center">
             <motion.h2
-              className="text-center text-[26px] sm:text-[30px] font-extrabold leading-tight bg-gradient-to-r from-neutral-900 to-gray-800 text-transparent bg-clip-text drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)] px-4 mb-4"
+              className="text-center text-[26px] sm:text-[30px] font-extrabold leading-tight text-black px-4 mb-4"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.6, type: "spring" }}
             >
               Assista o vídeo e veja como fazer{" "}
-              <span className="bg-gradient-to-r from-green-600 via-green-500 to-emerald-600 bg-clip-text text-transparent drop-shadow-[0_1px_1px_rgba(0,0,0,0.4)]">
+              <span className="text-green-600">
                 R${formattedBonus.toFixed(2)}
               </span>{" "}
               por dia com DOCE!
