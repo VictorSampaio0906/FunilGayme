@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeWrapper } from "./theme-wrapper";
+import { MetaPixel } from "./_meta-pixel"; // 👈 Importa aqui
+import UTMify from "@/components/UTMify";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      {/* Removemos style ou className direto do <html> */}
       <body suppressHydrationWarning className={inter.className}>
+        <MetaPixel />
+        <UTMify /> {/* 👈 Ativando a captura de UTMs com a UTMify */}
         <ThemeWrapper>{children}</ThemeWrapper>
       </body>
     </html>
