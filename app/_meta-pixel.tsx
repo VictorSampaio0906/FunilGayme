@@ -18,7 +18,7 @@ export function MetaPixel() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '987557523458593');
+            fbq('init', '1408066863771210');
             fbq('track', 'PageView');
           `,
         }}
