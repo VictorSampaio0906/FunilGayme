@@ -9,8 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Candy Bonus - Jogue e Ganhe",
-  description:
-    "Jogue e ganhe bônus em reais com nosso jogo estilo Candy Crush!",
+  description: "Jogue e descubra como faturar muito com nosso método!",
   generator: "Eu o 00",
 };
 

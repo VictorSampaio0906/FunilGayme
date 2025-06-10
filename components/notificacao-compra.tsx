@@ -17,19 +17,11 @@ export default function NotificacaoCompra({
   // Mensagens aleatórias de gatilho de compra
   const messages = [
     "Vanessa acabou de adquirir o método secreto!",
-    "Carlos ganhou R$450 em apenas 2 horas!",
     "Maria Julia comprou agora mesmo!",
-    "Pedro faturou R$320 hoje usando o método!",
     "Ana Beatriz acabou de garantir sua vaga!",
-    "João Paulo está ganhando R$200/dia!",
     "Fernanda comprou há 3 minutos!",
-    "Ricardo já fez R$680 esta semana!",
-    "Camila acabou de adquirir o curso!",
-    "Bruno está lucrando R$150/dia!",
-    "Juliana comprou e já está ganhando!",
-    "Marcos fez R$890 no primeiro mês!",
+    "Camila acabou de adquirir!",
     "Letícia acabou de garantir o desconto!",
-    "Rafael está com resultados incríveis!",
     "Patrícia comprou há poucos minutos!",
   ];
 
@@ -83,7 +75,7 @@ export default function NotificacaoCompra({
     // Esconder após 6 segundos
     setTimeout(() => {
       setIsVisible(false);
-    }, 6000);
+    }, 4000);
   };
 
   // Configurar intervalo de 15 segundos - apenas quando o componente é montado (no popup final)
@@ -96,7 +88,7 @@ export default function NotificacaoCompra({
     // Depois a cada 15 segundos
     const interval = setInterval(() => {
       showNotification();
-    }, 15000);
+    }, 50000);
 
     return () => {
       clearTimeout(initialTimeout);
@@ -119,7 +111,7 @@ export default function NotificacaoCompra({
             duration: 0.6,
           }}
         >
-          <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 p-4 flex items-center gap-3 relative overflow-hidden">
+          <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-200/50 p-2 flex items-center gap-3 relative overflow-hidden">
             {/* Brilho sutil de fundo */}
             <div className="absolute inset-0 bg-gradient-to-r from-green-50/50 to-emerald-50/50 rounded-2xl" />
 

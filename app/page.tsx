@@ -17,23 +17,30 @@ export default function Home() {
 
       <div className="w-full max-w-sm sm:max-w-md relative z-10 h-screen flex flex-col">
         {/* Header - Compacto */}
-        <div className="text-center mb-2 sm:mb-4 pt-2">
-          <h1 className="text-lg sm:text-xl font-black text-white drop-shadow-lg mb-1">
+        <div className="text-center mb-2 sm:mb-4 mt-3 pt-2">
+          <h1 className="text-lg sm:text-xl font-black text-white drop-shadow-lg mb-3">
             🍭 DESAFIO DOS DOCES 🍬
-          </h1>
-          <p className="text-white/80 text-xs sm:text-sm">
-            O jogo que paga de verdade!
+          </h1>{" "}
+          <p className="text-white/80 font-semibold text-base sm:text-base px-4 mt-2">
+            🎯 Você está prestes a{" "}
+            <span className="text-green-500 font-black"> JOGAR </span> e, se
+            bater a meta de pontos{" "}
+            <span className="text-green-500 font-black"> DESBLOQUEIA 🎁</span>{" "}
+            um super desconto em um{" "}
+            <span className="text-green-500 font-black">método</span>que pode
+            transformar sua renda!
           </p>
         </div>
-
         {/* Game Container - Flex grow para ocupar espaço disponível */}
         <div className="flex-1 flex flex-col justify-center">
           <CandyCrushGame />
         </div>
-
         {/* Footer - Compacto */}
         <div className="text-center mt-2 pb-2 text-white/60 text-xs">
-          <p>⭐ Mais de 10.000 jogadores já ganharam!</p>
+          <p>
+            🚨 Acesso liberado só para quem jogar agora!🚨 Mais de 10.000
+            jogadores já ganharam!
+          </p>
         </div>
       </div>
     </main>

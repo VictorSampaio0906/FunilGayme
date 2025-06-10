@@ -276,13 +276,19 @@ export default function CandyCrushGame() {
           >
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2 drop-shadow-lg">
               CANDY
-              <span className="text-yellow-300"> BONUS</span>
+              <span className="text-yellow-300"> BONUS 🎁</span>
             </h1>
             <div className="flex items-center justify-center gap-1 sm:gap-2 mb-2 sm:mb-4">
               <Star className="text-yellow-300" size={16} />
               <p className="text-white/90 text-sm sm:text-lg lg:text-xl font-bold">
-                Jogue e descubra quanto você pode faturar por semana com doces!
+                <span className="text-yellow-400">Jogue</span> e libere acesso a
+                um
+                <span className="text-black"> método oculto</span> de
+                <span className="text-green-400"> faturar com doces </span> —
+                apenas com o seu
+                <span className="text-blue-400"> celular!</span>
               </p>
+
               <Star className="text-yellow-300" size={16} />
             </div>
           </motion.div>
@@ -300,16 +306,16 @@ export default function CandyCrushGame() {
                 size={20}
               />
               <h3 className="text-white font-bold text-xs sm:text-sm">
-                Bônus em R$
+                Presente Surpresa 🎁
               </h3>
               <p className="text-white/80 text-xs hidden sm:block">
-                Descubra seu lucro 💥
+                Só Leva 1 Minuto ⏱️
               </p>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 sm:p-4 text-center">
               <Zap className="text-orange-300 mx-auto mb-1 sm:mb-2" size={20} />
               <h3 className="text-white font-bold text-xs sm:text-sm">
-                Super Rápido
+                Método Real 💡
               </h3>
               <p className="text-white/80 text-xs hidden sm:block">
                 Descubra em 60s seu potencial de lucro
@@ -321,7 +327,7 @@ export default function CandyCrushGame() {
                 size={20}
               />
               <h3 className="text-white font-bold text-xs sm:text-sm">
-                Transforme em Renda
+                Só Leva 1 Minuto ⏱️
               </h3>
               <p className="text-white/80 text-xs hidden sm:block">
                 Receba o passo a passo para lucrar com doces
@@ -352,15 +358,15 @@ export default function CandyCrushGame() {
                 <div className="w-5 h-5 sm:w-6 sm:h-6 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-xs sm:text-sm">
                   2
                 </div>
-                <p className="text-xs sm:text-sm">
-                  Faça combinações de 3 ou mais
-                </p>
+                <p className="text-xs sm:text-sm">Alcance a pontuação</p>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
                 <div className="w-5 h-5 sm:w-6 sm:h-6 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-xs sm:text-sm">
                   3
                 </div>
-                <p className="text-xs sm:text-sm">Acumule bônus!</p>
+                <p className="text-xs sm:text-sm">
+                  Desbloqueie seu presente especial
+                </p>
               </div>
             </div>
           </motion.div>
@@ -376,10 +382,10 @@ export default function CandyCrushGame() {
               onClick={startGame}
               className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-black py-4 sm:py-6 px-6 sm:px-12 rounded-full text-lg sm:text-2xl shadow-2xl transform transition hover:scale-105 border-2 sm:border-4 border-white/30"
             >
-              🎮 JOGAR AGORA 🎮
+              QUERO DESCOBRIR O SEGREDO!
             </Button>
             <p className="text-white/80 text-center mt-2 sm:mt-3 text-xs sm:text-sm">
-              ⚡ Grátis para jogar • 💰 Ganhe dinheiro real
+              ⚡ Acesso exclusivo • 💰 Aprenda Ganhar dinheiro!
             </p>
           </motion.div>
         </motion.div>
@@ -387,7 +393,7 @@ export default function CandyCrushGame() {
         <div className="flex flex-col items-center pt-8 sm:pt-16 relative z-10 min-h-0">
           <div className="w-full flex justify-between items-center mb-3 sm:mb-6">
             <div className="bg-gradient-to-r from-green-400 to-green-600 text-white px-3 py-2 sm:px-5 sm:py-3 rounded-lg font-bold text-sm sm:text-lg shadow-md">
-              R$ {bonusTotal.toFixed(2)}
+              {bonusTotal.toFixed(2)}
             </div>
             <div
               className={`px-3 py-2 sm:px-5 sm:py-3 rounded-lg font-bold text-sm sm:text-lg shadow-md ${

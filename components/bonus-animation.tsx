@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 interface BonusAnimationProps {
-  amount: number
-  x: number
-  y: number
+  amount: number;
+  x: number;
+  y: number;
 }
 
 export default function BonusAnimation({ amount, x, y }: BonusAnimationProps) {
   // Convert board coordinates to approximate pixel positions
   // Each candy is about 56px (14 * 4) and there's a 6px gap
-  const posX = x * 62 + 31
-  const posY = y * 62 + 31
+  const posX = x * 62 + 31;
+  const posY = y * 62 + 31;
 
   return (
     <motion.div
@@ -37,7 +37,7 @@ export default function BonusAnimation({ amount, x, y }: BonusAnimationProps) {
         ease: "easeOut",
       }}
     >
-      <span className="text-green-500 drop-shadow-lg">+R${amount}</span>
+      <span className="text-green-500 drop-shadow-lg">+{amount}</span>
     </motion.div>
-  )
+  );
 }
