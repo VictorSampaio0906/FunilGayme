@@ -97,7 +97,7 @@ export default function GameOverPopup({
               <span className="text-green-600">
                 R${formattedBonus.toFixed(2)}
               </span>{" "}
-              por dia com DOCE!
+              em poucos dias com DOCE!
             </motion.h2>
 
             <Cronometro />
